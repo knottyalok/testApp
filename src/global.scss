@@ -9,6 +9,91 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+/* Import theme files */
+@import './theme/mixins';
+@import './theme/colors';
+
+/* Utility Classes */
+
+// Spacing Utilities
+.p {
+  &-xxs { padding: var(--space-xxs); }
+  &-xs  { padding: var(--space-xs); }
+  &-sm  { padding: var(--space-sm); }
+  &-md  { padding: var(--space-md); }
+  &-lg  { padding: var(--space-lg); }
+  &-xl  { padding: var(--space-xl); }
+  &-xxl { padding: var(--space-xxl); }
+}
+
+.m {
+  &-xxs { margin: var(--space-xxs); }
+  &-xs  { margin: var(--space-xs); }
+  &-sm  { margin: var(--space-sm); }
+  &-md  { margin: var(--space-md); }
+  &-lg  { margin: var(--space-lg); }
+  &-xl  { margin: var(--space-xl); }
+  &-xxl { margin: var(--space-xxl); }
+}
+
+// Display Utilities
+.d-flex { display: flex; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-none { display: none; }
+
+// Flex Utilities
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.items-center { align-items: center; }
+.items-stretch { align-items: stretch; }
+
+// Text Utilities
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-truncate {
+  @include text-truncate;
+}
+
+// Shadow Utilities
+.shadow-sm { @include shadow-sm; }
+.shadow-md { @include shadow-md; }
+.shadow-lg { @include shadow-lg; }
+
+// Border Radius
+.radius-sm { border-radius: var(--radius-sm); }
+.radius-md { border-radius: var(--radius-md); }
+.radius-lg { border-radius: var(--radius-lg); }
+.radius-full { border-radius: var(--radius-full); }
+
+// Position Utilities
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+
+// Z-index Utilities
+.z-below { z-index: var(--z-below); }
+.z-normal { z-index: var(--z-normal); }
+.z-above { z-index: var(--z-above); }
+.z-modal { z-index: var(--z-modal); }
+.z-popover { z-index: var(--z-popover); }
+.z-maximum { z-index: var(--z-maximum); }
+
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
 

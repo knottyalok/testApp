@@ -1,2 +1,60 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+
+// Custom Color System
+:root {
+  // Primary Colors
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-light: #4c8dff;
+  --ion-color-primary-dark: #3171e0;
+
+  // Secondary Colors
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-light: #50c8ff;
+  --ion-color-secondary-dark: #36abe0;
+
+  // Accent Colors
+  --ion-color-accent: #5260ff;
+  --ion-color-accent-rgb: 82, 96, 255;
+  --ion-color-accent-light: #6370ff;
+  --ion-color-accent-dark: #4854e0;
+
+  // Neutral Colors
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+
+  // Semantic Colors
+  --ion-color-success: #2dd36f;
+  --ion-color-warning: #ffc409;
+  --ion-color-danger: #eb445a;
+  --ion-color-info: #3171e0;
+
+  // Spacing Variables
+  --space-xxs: 0.25rem;  // 4px
+  --space-xs: 0.5rem;    // 8px
+  --space-sm: 0.75rem;   // 12px
+  --space-md: 1rem;      // 16px
+  --space-lg: 1.5rem;    // 24px
+  --space-xl: 2rem;      // 32px
+  --space-xxl: 3rem;     // 48px
+
+  // Border Radius
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  // Z-index levels
+  --z-below: -1;
+  --z-normal: 1;
+  --z-above: 10;
+  --z-modal: 100;
+  --z-popover: 1000;
+  --z-maximum: 9999;
+}

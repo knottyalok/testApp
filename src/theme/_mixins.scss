@@ -1,0 +1,76 @@
+// Flexbox Mixins
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Responsive Mixins
+@mixin mobile {
+  @media (max-width: 576px) { @content; }
+}
+
+@mixin tablet {
+  @media (min-width: 577px) and (max-width: 768px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 769px) { @content; }
+}
+
+// Typography Mixins
+@mixin font-size($size, $line-height: normal) {
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Spacing Mixins
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+  padding-top: if($top != null, var(--space-#{$top}), null);
+  padding-right: if($right != null, var(--space-#{$right}), null);
+  padding-bottom: if($bottom != null, var(--space-#{$bottom}), null);
+  padding-left: if($left != null, var(--space-#{$left}), null);
+}
+
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+  margin-top: if($top != null, var(--space-#{$top}), null);
+  margin-right: if($right != null, var(--space-#{$right}), null);
+  margin-bottom: if($bottom != null, var(--space-#{$bottom}), null);
+  margin-left: if($left != null, var(--space-#{$left}), null);
+}
+
+// Box Shadow Mixins
+@mixin shadow-sm {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+@mixin shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+@mixin shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+// Transition Mixin
+@mixin transition($properties...) {
+  $transitions: ();
+  @each $prop in $properties {
+    $transitions: append($transitions, $prop 0.2s ease-in-out, comma);
+  }
+  transition: $transitions;
+}
